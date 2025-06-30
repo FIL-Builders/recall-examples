@@ -129,3 +129,27 @@ export interface TradeExecutionResult {
   result: any;
   success: boolean;
 }
+
+// ============================================================================
+// ALLOCATION ANALYSIS SCHEMA
+// ============================================================================
+
+export const AllocationAnalysisSchema = z.object({
+  totalValueUSD: z.number(),
+  currentAllocation: z.record(z.string(), z.number()),
+  targetAllocation: z.record(z.string(), z.number()),
+  allocationDrift: z.record(z.string(), z.number()),
+  needsRebalancing: z.boolean(),
+  rebalancingPlan: z.array(
+    z.object({
+      action: z.enum(["buy", "sell"]),
+      symbol: TokenSchema, // Use the local TokenSchema with enum
+      currentAmount: z.number(),
+      targetAmount: z.number(),
+      differenceAmount: z.number(),
+      differenceValueUSD: z.number(),
+      priority: z.number(),
+      preferredChain: z.string(),
+    })
+  ),
+});

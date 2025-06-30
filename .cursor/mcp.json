@@ -4,7 +4,7 @@
       "command": "npx",
       "args": ["-y", "@mastra/mcp-docs-server"]
     },
-    "Recall Trading Bot": {
+    "recall-rebalancer": {
       "url": "http://localhost:4111/api/mcp/recallTradingServer/sse"
     }
   }

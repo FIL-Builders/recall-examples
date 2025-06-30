@@ -1,6 +1,6 @@
 import { createStep } from "@mastra/core/workflows";
 import { z } from "zod";
-import { TradeExecutionSchema } from "../types";
+import { TradeExecutionSchema, AllocationAnalysisSchema } from "../types";
 
 /**
  * Step 6: Generate comprehensive report
@@ -12,7 +12,7 @@ export const generateReportStep = createStep({
     rebalancingResults: z.array(TradeExecutionSchema),
     totalRebalancingTrades: z.number(),
     totalRebalancingVolumeUSD: z.number(),
-    analysis: z.any(),
+    analysis: AllocationAnalysisSchema,
     consolidationResults: z.array(TradeExecutionSchema),
     finalAllocation: z.record(z.string(), z.number()),
     iterationsCompleted: z.number(),
