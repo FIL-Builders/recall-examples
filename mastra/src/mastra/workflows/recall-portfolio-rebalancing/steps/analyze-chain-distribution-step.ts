@@ -8,7 +8,7 @@ import {
   ChainAnalysisType,
 } from "../types";
 import { determineOptimalConsolidationChain } from "../utils";
-import { recallTradingTools } from "../../../tools/recall-trading-tools";
+import { recallTradingTools } from "../../../tools/recall-trading";
 
 /**
  * Step 2: Dynamically discover and analyze all portfolio tokens across chains with smart consolidation

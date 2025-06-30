@@ -7,7 +7,7 @@ import {
   DEFAULT_MIN_TRADE_VALUE_USD,
   DEFAULT_MAX_SLIPPAGE,
 } from "../constants";
-import { recallTradingTools } from "../../../tools/recall-trading-tools";
+import { recallTradingTools } from "../../../tools/recall-trading";
 
 /**
  * Step 1: Fetch current market prices and build target allocation from simple inputs

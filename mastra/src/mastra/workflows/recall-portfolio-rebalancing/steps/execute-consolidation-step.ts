@@ -7,7 +7,7 @@ import {
   ChainAnalysisSchema,
   TradeExecutionSchema,
 } from "../types";
-import { recallTradingTools } from "../../../tools/recall-trading-tools";
+import { recallTradingTools } from "../../../tools/recall-trading";
 
 /**
  * Step 3: Execute chain consolidation (if needed)

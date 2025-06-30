@@ -6,7 +6,6 @@ import {
   TradeExecutionSchema,
   TokenSchema,
   PortfolioDataSchema,
-  AllocationAnalysisSchema,
 } from "../types";
 import {
   splitTradeIntoSubTrades,
@@ -14,7 +13,10 @@ import {
   createTradeDelay,
 } from "../utils";
 import { REBALANCING_CONFIG } from "../constants";
-import { recallTradingTools } from "../../../tools/recall-trading-tools";
+import {
+  AllocationAnalysisSchema,
+  recallTradingTools,
+} from "../../../tools/recall-trading";
 
 /**
  * Step 5: Execute rebalancing trades with continuous iteration until target is reached
