@@ -41,7 +41,6 @@ export const getPortfolio = createTool({
       .default(false)
       .describe("Fetch current prices for all tokens in portfolio"),
   }),
-  outputSchema: PortfolioToolSchema,
   execute: async ({ context }) => {
     try {
       const response = await http.get(

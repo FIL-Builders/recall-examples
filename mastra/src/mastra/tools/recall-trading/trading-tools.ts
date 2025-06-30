@@ -42,7 +42,7 @@ export const executeTradeByAddress = createTool({
       .enum(SUPPORTED_CHAINS)
       .describe("Specific chain for the to token"),
   }),
-  outputSchema: TradeExecutionToolSchema,
+  // Remove outputSchema to avoid structured content requirement
   execute: async ({ context }) => {
     try {
       // Validate that we're not trading the same token
@@ -199,7 +199,7 @@ export const executeTrade = createTool({
       .optional()
       .describe("Specific chain for the to token"),
   }),
-  outputSchema: TradeExecutionToolSchema,
+  // Remove outputSchema to avoid structured content requirement
   execute: async ({ context }) => {
     try {
       // Validate that we're not trading the same token

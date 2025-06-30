@@ -45,7 +45,7 @@ export const getTokenInfoByAddress = createTool({
       .optional()
       .describe("Specific chain for EVM tokens"),
   }),
-  outputSchema: TokenInfoSchema,
+  // Remove outputSchema to avoid structured content requirement
   execute: async ({ context }) => {
     try {
       console.log(
@@ -129,7 +129,7 @@ export const getPrice = createTool({
         "Optional array of token addresses for dynamic price discovery"
       ),
   }),
-  outputSchema: PriceToolSchema,
+  // Remove outputSchema to avoid structured content requirement
   execute: async ({ context }) => {
     const prices: Record<string, number> = {};
     const tokenInfo: Record<string, any> = {};
